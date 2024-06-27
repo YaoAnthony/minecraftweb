@@ -8,7 +8,6 @@ import { Divider } from "antd";
 const SectionWrapper = (Component, idName) =>
 
 function HOC(props) {
-    console.log(props);
     return (
         <motion.section
             variants={staggerContainer()}
@@ -17,7 +16,7 @@ function HOC(props) {
             viewport={{ once: true }}
             className='w-full flex flex-col justify-start'
         >
-            <span className='hash-span mb-20' id={idName}><Divider/>&nbsp;</span>
+            <span className='hash-span' id={idName}><Divider/>&nbsp;</span>
             <Component {...props}/>
         </motion.section>
     );
